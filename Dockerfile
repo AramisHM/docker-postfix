@@ -7,9 +7,9 @@ RUN apt-get update -q -q && \
 
 EXPOSE 25/tcp 465/tcp 587/tcp
 
-VOLUME ["/var/log/postfix", "/var/spool/postfix"]
+VOLUME ["/var/spool/postfix"]
 
-RUN ln -sf /dev/stdout /var/log/mail.log \
-	&& ln -sf /dev/stderr /var/log/mail.err
+RUN ln -sf /dev/stdout /var/log/mail.log && \
+    ln -sf /dev/stderr /var/log/mail.err
 
 COPY ./startup /etc/minit/

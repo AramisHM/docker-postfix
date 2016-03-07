@@ -53,4 +53,4 @@ mounted with compose in the postfix configuration folder.
 Also Is important to save store the spool folder outside the
 container, the spool folder contains the email data of the
 mailboxes. In this case is not critical to do that, because for
-now this is a send only configuration.
+now this is a send only container.
