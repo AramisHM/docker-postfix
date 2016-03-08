@@ -1,3 +1,4 @@
 #!/bin/sh
 
-postfix start
+syslog-ng --no-caps
+service postfix start
