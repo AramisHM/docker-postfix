@@ -42,7 +42,6 @@ main_srv:
     - "25:25"
   volumes:
     - ./data/spool/:/var/spool/postfix
-    - ./data/log/:/var/log/postfix
     - ./main.cf:/etc/postfix/main.cf
     - ./master.cf:/etc/postfix/master.cf
 ```
