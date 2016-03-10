@@ -38,18 +38,15 @@ Run the container with docker-compose:
 ```yml
 main_srv:
   image: emarcs/postfix
+  hostname: mail
+  domainname: example.com
   ports:
     - "25:25"
   volumes:
     - ./data/spool/:/var/spool/postfix
-    - ./main.cf:/etc/postfix/main.cf
-    - ./master.cf:/etc/postfix/master.cf
 ```
 
-As you see in the example above the configuration files are
-mounted with compose in the postfix configuration folder.
-
-Also Is important to save store the spool folder outside the
+Is important to save store the spool folder outside the
 container, the spool folder contains the email data of the
 mailboxes. In this case is not critical to do that, because for
 now this is a send only container.
