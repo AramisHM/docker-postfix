@@ -1,4 +1,4 @@
 #!/bin/sh
 
-syslog-ng --no-caps
-service postfix start
+/etc/init.d/rsyslog start
+/etc/init.d/postfix start
